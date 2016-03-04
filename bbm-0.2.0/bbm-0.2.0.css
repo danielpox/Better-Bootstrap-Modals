@@ -1,0 +1,24 @@
+/*
+	Author: Daniel Pox
+	Name: Better Bootstrap Modals (bbm)
+	Version: 0.2.0
+
+	Licence: The MIT Licence (MIT)
+	Copyright (c) 2016 Daniel Pox.
+*/
+.modal-container {
+	overflow-y: scroll;
+	z-index: 1040;
+	
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	
+	background: rgba(0, 0, 0, 0.24);
+}
+
+.modal {
+	position: relative;
+}
