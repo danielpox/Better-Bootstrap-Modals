@@ -5,7 +5,7 @@ This simple and tiny (502 bytes gzipped) Javascript and CSS package allows an in
 
 Utilizing Bootstrap's own modal events, this works neatly with the core of vanilla Bootstrap.
 
-Note: on mobile devices, the body may have a tendency to scroll when at the top or bottom of the .modal-container. This is a well-known issue.
+Note: on mobile devices, the body may have a tendency to scroll when at the top or bottom of the `.modal-container`. This is a [well-known issue](http://getbootstrap.com/getting-started/#overflow-and-scrolling "Bootstrap").
 
 ## Requirements
 For Better Bootstrap Modals to work, all you need to do is include the CSS and Javascript files (or include the tiny source code found below), and disable backdrops on all modals.
@@ -49,14 +49,10 @@ To demonstrate how tiny Better-bootstrap-modals really is, here's all the source
 
 			modals.push(id);
 			$(this).show();
-
-			console.log(e);
 		});
 
 		$(".modal").on("hide.bs.modal", function(e) {
 			var id = $(this).attr("id");
-
-			console.log(e);
 
 			modals.splice(modals.indexOf(id), 1);
 			$(this).hide();
