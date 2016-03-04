@@ -1,8 +1,11 @@
 # Better-bootstrap-modals
 It's 2016, we need good modals.
 
-This simple and tiny (488 bytes gzipped) Javascript and CSS package allows an infinite amount of open modals, and a simple and natural way to navigate between them.
+This simple and tiny (502 bytes gzipped) Javascript and CSS package allows an infinite amount of open modals, and a simple and natural way to navigate between them.
+
 Utilizing Bootstrap's own modal events, this works neatly with the core of vanilla Bootstrap.
+
+Note: on mobile devices, the body may have a tendency to scroll when at the top or bottom of the .modal-container. This is a well-known issue.
 
 ## Requirements
 For Better Bootstrap Modals to work, all you need to do is include the CSS and Javascript files (or include the tiny source code found below), and disable backdrops on all modals.
