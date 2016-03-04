@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body {
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+}
+
+.hero {
+	padding-top: 80px;
+	padding-bottom: 80px;
+	
+	color: white;
+	background: -webkit-linear-gradient(bottom left, #B066FE, #63E2FF);
+	background: linear-gradient(bottom left, #B066FE, #63E2FF);
+}
+
+.hero h1 {
+	margin-top: 0;
+
+	font-weight: 300;
+}
+
+.hero .btn {
+	margin-top: 20px;
+
+	border-radius: 4px;
+}
+
+@media (max-width: 767px) {
+	.hero .btn {
+		display: block;
+
+		margin-top: 10px;
+	}
+
+	.hero .lead {
+		margin-bottom: 40px;
+	}
+}
+@media (min-width: 768px) {
+	.hero .btn:not(:last-child) {
+		margin-right: 10px;
+	}
+}
+
+.btn {
+	transition: all 0.064s ease-out;
+}
+
+.btn-secondary {
+	color: white;
+	background: transparent;
+
+	border-color: white;
+}
+.btn-secondary:hover, .btn-secondary:active {
+	color: #B066FE;
+	background: white;
+
+	border-color: white;
+}
+
+.paper {
+	padding-top: 40px;
+	padding-bottom: 40px;
+	
+	background: white;
+}
+.paper.dark {
+	background: #f2f2f2;
+}
+
+.paper h1, .paper h2 {
+	margin-top: 0;
+}
+
+.paper h3 {
+	font-weight: 300;
+}
+
+.paper p:last-child {
+	margin-bottom: 0;
+}
