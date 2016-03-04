@@ -1,7 +1,7 @@
 # Better-bootstrap-modals
 It's 2016, we need good modals.
 
-This simple and tiny (502 bytes gzipped) Javascript and CSS package allows an infinite amount of open modals, and a simple and natural way to navigate between them.
+This simple and tiny (518 bytes gzipped) Javascript and CSS package allows an infinite amount of open modals, and a simple and natural way to navigate between them.
 
 Utilizing Bootstrap's own modal events, this works neatly with the core of vanilla Bootstrap.
 
