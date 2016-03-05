@@ -1,5 +1,5 @@
 /*
-	Better Bootstrap Modals (bbm) v0.3.2
+	Better Bootstrap Modals (bbm) v0.3.3
 	https://github.com/danielpox/better-bootstrap-modals
 
 	Copyright (c) 2016 Daniel Pox
@@ -19,7 +19,7 @@ $(document).ready(function() {
 		$("." + cont).prepend(self);
 		
 		bbm_modals.push(id);
-		self.show();
+		self.show().addClass("bbm-open");
 	});
 	
 	$(".modal").on("hide.bs.modal", function() {
@@ -27,18 +27,18 @@ $(document).ready(function() {
 			id = self.attr("id");
 		
 		bbm_modals.splice(bbm_modals.indexOf(id), 1);
-		self.hide();
+		self.hide().removeClass("bbm-open");
 		
-		$("body").append(self);
+		$("body").prepend(self);
 		
 		if (bbm_modals.length == 0) {
-			$("." + cont).remove();
+			$("." + cont).detach();
 		}
 	});
 
 	$("body").on("click", "." + cont, function(e) {
 		if (!$(e.target).is(".modal-dialog *")) {
-			$(".modal").modal("hide");
+			$(".modal.bbm-open").modal("hide");
 		}
 	});
 });
