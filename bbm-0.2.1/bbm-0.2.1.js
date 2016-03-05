@@ -1,7 +1,7 @@
 /*
 	Author: Daniel Pox
 	Name: Better Bootstrap Modals (bbm)
-	Version: 0.2.0
+	Version: 0.2.1
 
 	License: The MIT License (MIT)
 	Copyright (c) 2016 Daniel Pox.

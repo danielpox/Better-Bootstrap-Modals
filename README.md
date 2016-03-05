@@ -21,6 +21,7 @@ It of course also requires Bootstrap and jQuery.
 To demonstrate how tiny Better-bootstrap-modals really is, here's all the source code:
 ### CSS
 	.modal-container {
+		-webkit-overflow-scrolling: touch;
 		overflow-y: scroll;
 		z-index: 1040;
 
