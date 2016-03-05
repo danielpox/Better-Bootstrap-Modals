@@ -7,7 +7,7 @@
 	<title>Better Bootstrap Modals</title>
 	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/bbm-0.3.2.min.css">
+	<link rel="stylesheet" href="css/bbm-0.3.3.min.css">
 </head>
 <body>
 	<div class="modal" id="modal1" data-backdrop="false" role="dialog">
@@ -90,8 +90,8 @@
 						<h1>Better Bootstrap Modals</h1>
 						<p class="lead">It's 2016, we need better modals.</p>
 						<a href="https://github.com/danielpox/better-bootstrap-modals" target="_blank" class="btn btn-secondary btn-lg">View on GitHub</a><!--
-						--><a href="https://github.com/danielpox/better-bootstrap-modals/raw/master/bbm-0.3.2.min.tar.gz" class="btn btn-secondary btn-lg">Download v0.3.2.min.tar.gz</a><!--
-						--><a href="https://github.com/danielpox/better-bootstrap-modals/raw/master/bbm-0.3.2.tar.gz" class="btn btn-secondary btn-lg">Download v0.3.2.tar.gz</a>
+						--><a href="https://github.com/danielpox/better-bootstrap-modals/raw/master/bbm-0.3.3.min.tar.gz" class="btn btn-secondary btn-lg">Download v0.3.3.min.tar.gz</a><!--
+						--><a href="https://github.com/danielpox/better-bootstrap-modals/raw/master/bbm-0.3.3.tar.gz" class="btn btn-secondary btn-lg">Download v0.3.3.tar.gz</a>
 					</div>
 				</div>
 			</div>
@@ -103,7 +103,7 @@
 				<div class="col-md-12">
 					<h2>Problem solved</h2>
 					<p class="lead">Simple. Tiny.</p>
-					<p>This simple and tiny (647 bytes gzipped) Javascript and CSS package allows an infinite amount of open modals, and a simple and natural way to navigate between them.</p>
+					<p>This simple and tiny (666 bytes gzipped) Javascript and CSS package allows an infinite amount of open modals, and a simple and natural way to navigate between them.</p>
 					<p>Utilizing Bootstrap's own modal events, this works neatly with the core of vanilla Bootstrap.</p>
 					<p>Note: on mobile devices, the <code>body</code> may have a tendency to scroll when at the top or bottom of the <code>.modal-container</code>. This is a <a href="http://getbootstrap.com/getting-started/#overflow-and-scrolling">well-known issue</a>.</p>
 				</div>
@@ -140,14 +140,14 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Source code (v0.3.2)</h2>
+					<h2>Source code (v0.3.3)</h2>
 					<p>To demonstrate how tiny Better Bootstrap Modals really is, here's all the source code:</p>
 					<!-- CSS -->
 					<h3>CSS</h3>
 					<pre>.modal-container {<br>    -webkit-overflow-scrolling: touch;<br>    overflow-y: scroll;<br>    z-index: 1040;<br><br>    position: fixed;<br>    top: 0;<br>    left: 0;<br>    right: 0;<br>    bottom: 0;<br><br>    background: rgba(0, 0, 0, 0.24);<br>}<br><br>.modal {<br>    position: relative;<br>}</pre>
 					<!-- Javascript -->
 					<h3>Javascript</h3>
-					<pre>bbm_modals = [];<br><br>$(document).ready(function() {<br>    var cont = "modal-container";<br>    $(".modal").on("show.bs.modal", function() {<br>        var self = $(this),<br>            id = self.attr("id");<br><br>        if (bbm_modals.length == 0) {<br>            self.wrap('&lt;div class="' + cont + '"&gt;&lt;/div&gt;');<br>        }<br>        $("." + cont).prepend(self);<br><br>        bbm_modals.push(id);<br>        self.show();<br>    });<br><br>    $(".modal").on("hide.bs.modal", function() {<br>        var self = $(this),<br>            id = self.attr("id");<br><br>        bbm_modals.splice(bbm_modals.indexOf(id), 1);<br>        self.hide();<br><br>        $("body").append(self);<br><br>        if (bbm_modals.length == 0) {<br>            $("." + cont).remove();<br>        }<br>    });<br><br>    $("body").on("click", "." + cont, function(e) {<br>        if (!$(e.target).is(".modal-dialog *")) {<br>            $(".modal").modal("hide");<br>        }<br>    });<br>});</pre>
+					<pre>bbm_modals = [];<br><br>$(document).ready(function() {<br>    var cont = "modal-container";<br>    $(".modal").on("show.bs.modal", function() {<br>        var self = $(this),<br>            id = self.attr("id");<br><br>        if (bbm_modals.length == 0) {<br>            self.wrap('&lt;div class="' + cont + '"&gt;&lt;/div&gt;');<br>        }<br>        $("." + cont).prepend(self);<br><br>        bbm_modals.push(id);<br>        self.show().addClass("bbm-open");<br>    });<br><br>    $(".modal").on("hide.bs.modal", function() {<br>        var self = $(this),<br>            id = self.attr("id");<br><br>        bbm_modals.splice(bbm_modals.indexOf(id), 1);<br>        self.hide().removeClass("bbm-open");<br><br>        $("body").append(self);<br><br>        if (bbm_modals.length == 0) {<br>            $("." + cont).detach();<br>        }<br>    });<br><br>    $("body").on("click", "." + cont, function(e) {<br>        if (!$(e.target).is(".modal-dialog *")) {<br>            $(".modal.bbm-open").modal("hide");<br>        }<br>    });<br>});</pre>
 				</div>
 			</div>
 		</div>
@@ -163,6 +163,6 @@
 	</footer>
 	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 	<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
-	<script src="js/bbm-0.3.2.min.js"></script>
+	<script src="js/bbm-0.3.3.min.js"></script>
 </body>
 </html>
