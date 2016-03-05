@@ -1,5 +1,5 @@
 /*
-	Better Bootstrap Modals (bbm) v0.3.1
+	Better Bootstrap Modals (bbm) v0.3.2
 	https://github.com/danielpox/better-bootstrap-modals
 
 	Copyright (c) 2016 Daniel Pox
@@ -29,7 +29,7 @@ $(document).ready(function() {
 		bbm_modals.splice(bbm_modals.indexOf(id), 1);
 		self.hide();
 		
-		$("body").prepend(self);
+		$("body").append(self);
 		
 		if (bbm_modals.length == 0) {
 			$("." + cont).remove();

@@ -1,7 +1,7 @@
 # Better Bootstrap Modals
 It's 2016, we need good modals.
 
-This simple and tiny (645 bytes gzipped) Javascript and CSS package allows an infinite amount of open modals, and a simple and natural way to navigate between them.
+This simple and tiny (647 bytes gzipped) Javascript and CSS package allows an infinite amount of open modals, and a simple and natural way to navigate between them.
 
 Utilizing Bootstrap's own modal events, this works neatly with the core of vanilla Bootstrap.
 
@@ -17,7 +17,7 @@ It of course also requires Bootstrap and jQuery.
 		...
 	</div>
 
-## Source code (v0.3.1)
+## Source code (v0.3.2)
 To demonstrate how tiny Better Bootstrap Modals really is, here's all the source code:
 ### CSS
 	.modal-container {
@@ -62,7 +62,7 @@ To demonstrate how tiny Better Bootstrap Modals really is, here's all the source
 			bbm_modals.splice(bbm_modals.indexOf(id), 1);
 			self.hide();
 			
-			$("body").prepend(self);
+			$("body").append(self);
 			
 			if (bbm_modals.length == 0) {
 				$("." + cont).remove();
