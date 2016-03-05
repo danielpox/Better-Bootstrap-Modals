@@ -17,7 +17,7 @@ It of course also requires Bootstrap and jQuery.
 		...
 	</div>
 
-## Source code (v0.3.0)
+## Source code (v0.3.1)
 To demonstrate how tiny Better Bootstrap Modals really is, here's all the source code:
 ### CSS
 	.modal-container {
