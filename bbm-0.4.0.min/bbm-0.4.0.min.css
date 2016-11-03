@@ -1,0 +1,2 @@
+/* bbm v0.4.0 | (c) 2016 Daniel Pox / Mouse0270 | The MIT License (MIT) */
+.modal-container{background:rgba(0,0,0,.5);bottom:0;height:0;left:0;-webkit-overflow-scrolling:touch;overflow-y:scroll;position:fixed;right:0;top:0;z-index:1041}body.modal-open .modal-container{height:100%}body.modal-open .modal-container>.modal{position:relative}body.modal-open .modal-container>.modal.in{display:block}body.modal-open .modal-container.show-first-only>.modal.in~.modal.in{display:none}
