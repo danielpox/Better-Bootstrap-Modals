@@ -4,9 +4,10 @@
 ** Contibutor: Mouse0270 https://github.com/mouse0270
 ** Released under The MIT License (MIT)
 ==========================================================*/
+// Get Script Data Attributes
+var dataVariables = (function() { var scripts = document.getElementsByTagName("script"); return scripts[scripts.length - 1].dataset; })();
 $(document).ready(function() {
     var $modalContainer = $('<div class="modal-container"></div>');
-	var dataVariables = (function() { var scripts = document.getElementsByTagName("script"); return scripts[scripts.length - 1].dataset; })();
 
     // Check if `.modal-container` exists.
     // If so, set $modalContainer to first instance
