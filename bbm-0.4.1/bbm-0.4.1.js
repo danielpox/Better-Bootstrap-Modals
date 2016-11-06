@@ -1,5 +1,5 @@
 /*
-	Better Bootstrap Modals (bbm) v0.4.0
+	Better Bootstrap Modals (bbm) v0.4.1
 	https://github.com/danielpox/better-bootstrap-modals
 
 	Copyright (c) 2016 Daniel Pox
