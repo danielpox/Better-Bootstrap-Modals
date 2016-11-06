@@ -5,12 +5,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Better Bootstrap Modals</title>
-	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+	<link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
 	<link rel="stylesheet" href="css/style.css">
-	<link rel="stylesheet" href="css/bbm-0.3.3.min.css">
+	<link rel="stylesheet" href="css/bbm-0.4.0.min.css">
 </head>
 <body>
-	<div class="modal" id="modal1" data-backdrop="false" role="dialog">
+	<div class="modal" id="modal1" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -28,7 +28,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="modal fade" id="modal2" data-backdrop="false" role="dialog">
+	<div class="modal fade" id="modal2" role="dialog">
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -38,7 +38,7 @@
 				<div class="modal-body">
 					<p>You made it! Wasn't that just really cool? (Did you notice that it neatly supports <code>.fade</code> as well?)</p>
 					<p>Better Bootstrap Modals also supports modals of different sizes, since it is deeply integrated with the core of Bootstrap.</p>
-					<p>It also supports Popovers, like this one: <a href="#" data-toggle="popover" title="Hello :)" data-placement="top" data-content="Please let me go back to hiding with my friends by clicking me again >~<">click me</a>.</p>
+					<p>It also supports Popovers, like this one: <a href="#" data-toggle="popover" title="Hello :)" data-placement="top" data-content="Please let me go back to hiding with my friends by clicking me again >~<" tabindex="0" role="button">click me</a>.</p>
 					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal3">Open a large modal</button>
 				</div>
 				<div class="modal-footer">
@@ -47,7 +47,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="modal" id="modal3" data-backdrop="false" role="dialog">
+	<div class="modal" id="modal3" role="dialog">
 		<div class="modal-dialog modal-lg">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -64,7 +64,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="modal fade" id="modal4" data-backdrop="false" role="dialog">
+	<div class="modal fade" id="modal4" role="dialog">
 		<div class="modal-dialog modal-sm">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -90,8 +90,8 @@
 						<h1>Better Bootstrap Modals</h1>
 						<p class="lead">It's 2016, we need better modals.</p>
 						<a href="https://github.com/danielpox/better-bootstrap-modals" target="_blank" class="btn btn-secondary btn-lg">View on GitHub</a><!--
-						--><a href="https://github.com/danielpox/better-bootstrap-modals/raw/master/bbm-0.3.3.min.tar.gz" class="btn btn-secondary btn-lg">Download v0.3.3.min.tar.gz</a><!--
-						--><a href="https://github.com/danielpox/better-bootstrap-modals/raw/master/bbm-0.3.3.tar.gz" class="btn btn-secondary btn-lg">Download v0.3.3.tar.gz</a>
+						--><a href="https://github.com/danielpox/better-bootstrap-modals/raw/master/bbm-0.4.1.min.tar.gz" class="btn btn-secondary btn-lg">Download v0.4.1.min.tar.gz</a><!--
+						--><a href="https://github.com/danielpox/better-bootstrap-modals/raw/master/bbm-0.4.1.tar.gz" class="btn btn-secondary btn-lg">Download v0.4.1.tar.gz</a>
 					</div>
 				</div>
 			</div>
@@ -103,7 +103,7 @@
 				<div class="col-md-12">
 					<h2>Problem solved</h2>
 					<p class="lead">Simple. Tiny.</p>
-					<p>This simple and tiny (666 bytes gzipped) Javascript and CSS package allows an infinite amount of open modals, and a simple and natural way to navigate between them.</p>
+					<p>This simple and tiny (936 bytes gzipped) Javascript and CSS package allows an infinite amount of open modals, and a simple and natural way to navigate between them.</p>
 					<p>Utilizing Bootstrap's own modal events, this works neatly with the core of vanilla Bootstrap.</p>
 					<p>Note: on mobile devices, the <code>body</code> may have a tendency to scroll when at the top or bottom of the <code>.modal-container</code>. This is a <a href="http://getbootstrap.com/getting-started/#overflow-and-scrolling">well-known issue</a>.</p>
 				</div>
@@ -115,7 +115,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h2>Example</h2>
-					<p>Try clicking <a href="#" data-toggle="modal" data-target="#modal1">this text</a>, or the button below, to open an example modal.</p>
+					<p>Try clicking <a href="#" data-toggle="modal" data-target="#modal1">this text</a>, or the buttons below, to open an example modal.</p>
 					<a href="#" class="btn btn-default" data-toggle="modal" data-target="#modal1">Button link</a>
 					<button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal1">Button</button>
 				</div>
@@ -127,11 +127,11 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h2>Requirements</h2>
-					<p>For Better Bootstrap Modals to work, all you need to do is include the CSS and Javascript files (or include the tiny source code found below), and disable backdrops as well as <code>tabindex="-1"</code> on all modals.</p>
+					<p>For Better Bootstrap Modals to work, all you need to do is include the CSS and Javascript files (or include the tiny source code found below), and be sure to not include <code>tabindex="-1"</code> on any modals. (It automatically adds the <code>tabindex</code> to the most recently opened modal.)</p>
 					<p>It of course also requires Bootstrap and jQuery.</p>
 					<!-- Backdrop -->
-					<h3>Disable backdrop and don't include <code>tabindex="-1"</code></h3>
-					<pre>&lt;!-- Basic Bootstrap modal without backdrop --&gt;<br>&lt;div class="modal" id="modal1" data-backdrop="false" role="dialog"&gt;<br>    ...<br>&lt;/div&gt;</pre>
+					<h3>Don't include <code>tabindex="-1"</code></h3>
+					<pre>&lt;!-- Basic Bootstrap modal without tabindex --&gt;<br>&lt;div class="modal" id="modal1" role="dialog"&gt;<br>    ...<br>&lt;/div&gt;</pre>
 				</div>
 			</div>
 		</div>
@@ -140,14 +140,51 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h2>Source code (v0.3.3)</h2>
-					<p>To demonstrate how tiny Better Bootstrap Modals really is, here's all the source code:</p>
+					<h2>Options</h2>
+					<p>As of v0.4.0, you can specify a few options. Options can be passed via data attributes by appending the option name to <code>data-</code>, as in <code>data-modal-show=""</code>, on the <code>&lt;script&gt;</code> tag used to reference the Better Bootstrap Modals file. Example: <code>&lt;script src="..." data-*=""&gt;&lt;/script&gt;</code></p>
+					<div class="table-responsive">
+						<table class="table table-striped table-bordered">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>type</th>
+									<th>default</th>
+									<th>description</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>modal-show</td>
+									<td>the string <code>'first'</code></td>
+									<td>false</td>
+									<td>Only shows one modal at a time, the most recently opened modal being shown.</td>
+								</tr>
+								<tr>
+									<td>force-backdrop</td>
+									<td>boolean</td>
+									<td>false</td>
+									<td>Better Bootstrap Modals uses a custom backdrop, which cannot be disabled. However, this option forces the default built-in backdrop, adding a layer for every modal you open. (Not recommended.)</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="paper">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h2>Source code (v0.4.1)</h2>
+					<p>To demonstrate how tiny Better Bootstrap Modals really is, here's all the source code (uncompressed):</p>
 					<!-- CSS -->
 					<h3>CSS</h3>
-					<pre>.modal-container {<br>    -webkit-overflow-scrolling: touch;<br>    overflow-y: scroll;<br>    z-index: 1040;<br><br>    position: fixed;<br>    top: 0;<br>    left: 0;<br>    right: 0;<br>    bottom: 0;<br><br>    background: rgba(0, 0, 0, 0.24);<br>}<br><br>.modal {<br>    position: relative;<br>}</pre>
+					<pre>.modal-container {<br>    -webkit-overflow-scrolling: touch;<br>    overflow-y: scroll;<br>    z-index: 1041;<br><br>    position: fixed;<br>    top: 0;<br>    left: 0;<br>    right: 0;<br>    bottom: 0;<br><br>    background: rgba(0, 0, 0, 0.24);<br>}<br><br>.modal-container.backdrop {<br>    background: transparent;<br>}<br><br>.modal-container .modal {<br>    position: relative;<br>}<br><br>body.modal-open .modal-container .modal.in {<br>    display: block;<br>}<br><br>body.modal-open .modal-container.show-first-only .modal.in ~ .modal.in {<br>    display: none;<br>}</pre>
 					<!-- Javascript -->
 					<h3>Javascript</h3>
-					<pre>bbm_modals = [];<br><br>$(document).ready(function() {<br>    var cont = "modal-container";<br>    $(".modal").on("show.bs.modal", function() {<br>        var self = $(this),<br>            id = self.attr("id");<br><br>        if (bbm_modals.length == 0) {<br>            self.wrap('&lt;div class="' + cont + '"&gt;&lt;/div&gt;');<br>        }<br>        $("." + cont).prepend(self);<br><br>        bbm_modals.push(id);<br>        self.show().addClass("bbm-open");<br>    });<br><br>    $(".modal").on("hide.bs.modal", function() {<br>        var self = $(this),<br>            id = self.attr("id");<br><br>        bbm_modals.splice(bbm_modals.indexOf(id), 1);<br>        self.hide().removeClass("bbm-open");<br><br>        $("body").append(self);<br><br>        if (bbm_modals.length == 0) {<br>            $("." + cont).detach();<br>        }<br>    });<br><br>    $("body").on("click", "." + cont, function(e) {<br>        if (!$(e.target).is(".modal-dialog *")) {<br>            $(".modal.bbm-open").modal("hide");<br>        }<br>    });<br>});</pre>
+					<pre>+function() {<br>    var bbm_modals = [],<br>        data_vars = (function() { var scripts = document.getElementsByTagName("script"); return scripts[scripts.length - 1].dataset; }()),<br>        ti = "tabindex",<br>        cont = "modal-container";<br><br>    if (data_vars.forceBackdrop === "true") cont += " backdrop";<br>    else $.fn.modal.Constructor.DEFAULTS.backdrop = 0;<br><br>    if (data_vars.modalShow === "first") cont += " show-first-only";<br>    var $cont = $('&lt;div class="' + cont + '"&gt;&lt;/div&gt;');<br><br>    $(document).ready(function() {<br>        $(".modal").on("show.bs.modal", function() {<br>            var self = $(this);<br><br>            if (bbm_modals.length == 0) $("body").prepend($cont);<br>            $cont.prepend(self);<br><br>            bbm_modals.push(self.attr("id"));<br>            $cont.find(".modal.in").removeAttr(ti);<br>            self.show().attr(ti, "-1");<br>        });<br><br>        $(".modal").on("shown.bs.modal", function() {<br>            $(this).css("display", "");<br>        });<br><br>        $(".modal").on("hide.bs.modal", function() {<br>            var self = $(this);<br><br>            bbm_modals.splice(bbm_modals.indexOf(self.attr("id")), 1);<br>            self.hide();<br><br>            $("body").prepend(self);<br><br>            if (bbm_modals.length == 0) $cont.detach();<br>        });<br><br>        $(".modal").on("hidden.bs.modal", function() {<br>            $(this).removeAttr(ti);<br><br>            if (bbm_modals.length > 0) {<br>                $("body").addClass("modal-open");<br>                $cont.find(".modal.in").eq(0).attr(ti, "-1");<br>            }<br>        });<br><br>        $("body").on("click", "." + $cont[0].classList[0], function(e) {<br>            if (!$(e.target).is(".modal-dialog *")) $(".modal").modal("hide");<br>        });<br>    });<br>}();</pre>
+					
 				</div>
 			</div>
 		</div>
@@ -161,8 +198,9 @@
 			</div>
 		</div>
 	</footer>
-	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-	<script src='http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
-	<script src="js/bbm-0.3.3.min.js"></script>
+	<script src='https://code.jquery.com/jquery-3.1.1.min.js'></script>
+	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+	<script src="js/bbm-0.4.1.min.js" data-force-backdrop="true"></script>
+	<script>$(function(){$('[data-toggle="popover"]').popover().click(function(e){e.preventDefault()})})</script>
 </body>
 </html>
